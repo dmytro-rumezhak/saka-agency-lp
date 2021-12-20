@@ -1,0 +1,101 @@
+/* Оголошення змінних */
+:root {
+  --background-color: #12141d;
+  --title-color: #ffffff;
+  --text-color: #ffffff;
+  --accent-color: #a1c5e9;
+  --btn-color: #4080bf;
+}
+
+/*  Скидання стилів */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+}
+
+/* Стилізація body */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Стилізація header */
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.header-nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-item {
+  margin-right: 40px;
+}
+
+.header-nav-link {
+  display: block;
+  padding: 31px 0 24px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.btn {
+  padding: 13px 27px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: var(--btn-color);
+  color: var(--title-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
