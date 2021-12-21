@@ -5,6 +5,10 @@
   --text-color: #ffffff;
   --accent-color: #a1c5e9;
   --btn-color: #4080bf;
+  --icon-color: #a1c5e9;
+  --bcg-icon: #1e2028;
+  --bcg-color-selected: #8e8f93;
+  --white-color: #ffffff;
 }
 
 /*  Скидання стилів */
@@ -20,7 +24,8 @@ li {
   margin: 0;
 }
 
-img {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -119,4 +124,383 @@ body {
 .btn:focus {
   background-color: var(--accent-color);
   color: var(--background-color);
+}
+
+/* Стилізація hero */
+.section {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.section-hero {
+  padding-top: 50px;
+}
+
+.container.hero-bcg {
+  max-width: 1110px;
+  padding-right: 0;
+  background: linear-gradient(
+      106.17deg,
+      rgba(40, 40, 40, 0.56) -25.28%,
+      rgba(38, 38, 38, 0.24) 123.88%
+    ),
+    url('../images/hero.jpg');
+  background-size: 1110px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.hero-text {
+  max-width: 747px;
+  padding-top: 207px;
+  padding-bottom: 90px;
+  margin-left: auto;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 61px;
+  line-height: 1.51;
+  margin-bottom: 10px;
+}
+.hero-desc {
+  font-size: 20px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+/* Стилізація about */
+.section-title {
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 1.4;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+
+.about-title {
+  margin-bottom: 40px;
+}
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about-item {
+  display: flex;
+}
+.about-item:nth-child(2n-1) {
+  margin-right: 30px;
+}
+
+.about-item:not(:nth-child(n + 3)) {
+  margin-bottom: 30px;
+}
+
+.about-item-img {
+  width: 70px;
+  height: 70px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bcg-icon);
+  border-radius: 50%;
+}
+
+.about-item-icon {
+  width: 40px;
+  height: 40px;
+  fill: var(--icon-color);
+}
+
+.about-item-text {
+  max-width: 440px;
+}
+.about-item-title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+.about-item-desc {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.87;
+  text-transform: capitalize;
+}
+
+/* Стилізація  Our Specialization*/
+.section-title.section-title-center {
+  text-align: center;
+}
+.activity-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.activity-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+  padding: 20px 20px 40px 20px;
+  background-color: var(--bcg-icon);
+  border-radius: 10px;
+}
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 50px;
+  fill: var(--accent-color);
+}
+.activity-item-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+
+  text-transform: capitalize;
+}
+.activity-item-desc {
+  margin-bottom: 50px;
+  line-height: 1.75;
+}
+.activity-item-link,
+.project-header-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-color);
+}
+.activity-arrow-link,
+.project-header-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  fill: var(--accent-color);
+}
+
+/* Стилізація  The Best Amazing Project*/
+.project-header {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.project-title {
+  margin-bottom: 0;
+}
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.project-item {
+  flex-basis: calc(100% / 2 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.project-img {
+  border-radius: 12px;
+}
+
+/* Стилізація Meet The Founder*/
+.section-founder {
+  padding-bottom: 130px;
+}
+
+.founder-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.founder-list-left {
+  margin-right: 25px;
+}
+
+.founder-item-left,
+.founder-item-right {
+  max-width: 540px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.founder-item-left:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.founder-item-left-text {
+  text-align: right;
+  padding-right: 10px;
+  padding-bottom: 15px;
+}
+
+.founder-item-left:nth-child(2) > .founder-item-left-text {
+  padding-bottom: 90px;
+}
+
+.founder-item-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.founder-item-desc {
+  border-top-left-radius: 110px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.86;
+}
+
+img[src='./images/jhon-doe.jpg'] {
+  border-top-left-radius: 105px;
+}
+
+img[src='./images/doe-jhon.jpg'] {
+  border-top-right-radius: 105px;
+}
+
+img[src='./images/jhon-key.jpg'] {
+  border-bottom-left-radius: 105px;
+}
+
+img[src='./images/kekey.jpg'] {
+  border-bottom-right-radius: 105px;
+}
+
+.founder-item-right {
+  flex-direction: row-reverse;
+}
+
+.founder-item-right:not(:last-child) {
+  margin-bottom: 25px;
+  margin-top: 70px;
+}
+
+.founder-item-right-text {
+  text-align: left;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.founder-item-right:nth-child(2) > .founder-item-right-text {
+  padding-bottom: 110px;
+}
+
+/* Стилізація Our Customer Say */
+.container-customer {
+  display: flex;
+  align-items: center;
+}
+.section-text {
+  max-width: 491px;
+  margin-right: 53px;
+}
+.section-text > .section-title {
+  margin-bottom: 10px;
+}
+.customer-desc {
+  font-size: 18px;
+  line-height: 1.94;
+}
+.customer-item {
+  max-width: 570px;
+  padding: 37px 44px 56px 26px;
+  background-color: var(--bcg-icon);
+  border-radius: 10px;
+}
+.customer-item-quotemark {
+  display: block;
+  width: 80px;
+  height: 68px;
+  margin-left: auto;
+  margin-bottom: 21px;
+  fill: var(--bcg-color-selected);
+}
+.customer-foto-conteiner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 17px;
+}
+.customer-foto-conteiner img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.customer-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  margin-bottom: 5px;
+}
+.customer-activity {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.customer-item-desc {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.94;
+  margin-bottom: 50px;
+}
+.customer-slider-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.customer-slider-item:not(:last-child) {
+  margin-right: 10px;
+}
+.slider-svg {
+  width: 10px;
+  height: 10px;
+  fill: var(--bcg-color-selected);
+}
+
+.customer-slider-item:nth-child(1) > .slider-svg {
+  fill: var(--white-color);
+}
+
+/* Стидізація  Grow Your Business With
+ SakaAgency*/
+.section-develop {
+  padding-bottom: 50px;
+}
+.container-develop {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: var(--bcg-icon);
+}
+.section-title-develop {
+  margin-bottom: 36px;
+}
+.container-develop > .container .btn {
+  margin-bottom: 50px;
+}
+.develop-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.develop-item {
+  display: block;
+  width: 239px;
+  border-right: 2px solid var(--white-color);
+  border-left: 2px solid var(--white-color);
+}
+.develop-item:not(:last-child) {
+  margin-right: 30px;
+}
+.develop-title {
+  font-size: 28px;
+  line-height: 1.43;
+}
+.develop-desc {
+  line-height: 1.62;
 }
