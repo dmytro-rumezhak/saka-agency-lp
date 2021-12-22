@@ -9,6 +9,7 @@
   --bcg-icon: #1e2028;
   --bcg-color-selected: #8e8f93;
   --white-color: #ffffff;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*  Скидання стилів */
@@ -47,6 +48,7 @@ a {
 button {
   padding: 0;
   border: none;
+  cursor: pointer;
 }
 
 /* Стилізація body */
@@ -77,7 +79,7 @@ body {
 }
 
 .logo-span {
-  transition: color 250ms linear;
+  transition: color 250ms var(--timing-function);
 }
 
 .header-nav-list {
@@ -95,7 +97,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
 
-  transition: color 250ms linear;
+  transition: color 250ms var(--timing-function);
 }
 
 .header-nav-link:hover,
@@ -115,9 +117,8 @@ body {
   background-color: var(--btn-color);
   color: var(--title-color);
   border-radius: 10px;
-  cursor: pointer;
 
-  transition: background-color 250ms linear, color 250ms linear;
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
 .btn:hover,
@@ -470,6 +471,7 @@ img[src='./images/kekey.jpg'] {
  SakaAgency*/
 .section-develop {
   padding-bottom: 50px;
+  border-bottom: 1px solid var(--bcg-icon);
 }
 .container-develop {
   padding-top: 50px;
@@ -503,4 +505,150 @@ img[src='./images/kekey.jpg'] {
 }
 .develop-desc {
   line-height: 1.62;
+}
+
+/* Стилізація footer */
+.footer {
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+.footer > .container {
+  display: flex;
+}
+.footer-copyright {
+  width: 255px;
+  margin-right: 117px;
+}
+.footer-copyright > .logo {
+  display: block;
+  margin-bottom: 10px;
+}
+.copyright-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.86;
+}
+.footer-social-list {
+  display: flex;
+}
+.footer-social-item {
+  width: 32px;
+  height: 32px;
+}
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-social-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color);
+  opacity: 0.1;
+
+  transition: opacity 250ms var(--timing-function), fill 250ms var(--timing-function),
+    transform 250ms var(--timing-function);
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  opacity: 1;
+}
+.footer-social-icon {
+  z-index: 1000;
+  width: 17px;
+  height: 17px;
+  opacity: 1;
+  fill: red;
+  transform: scale(1);
+  transition: fill 250ms var(--timing-function), transform 250ms var(--timing-function);
+}
+
+.footer-social-link:hover .footer-social-icon,
+.footer-social-link:focus .footer-social-icon {
+  fill: var(--background-color);
+  transform: scale(1.3);
+}
+
+.footer-company {
+  width: 140px;
+  margin-right: 80px;
+}
+.footer-company-title,
+.footer-support-title,
+.footer-form-title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.footer-company-item:not(:last-child),
+.footer-support-item:not(:last-child),
+.footer-support-address-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-company-link,
+.footer-suport-link,
+.footer-support-address-link {
+  font-weight: 300;
+  line-height: 1.5;
+  transition: color 250ms var(--timing-function), font-size 250ms var(--timing-function);
+}
+
+.footer-company-link:hover,
+.footer-company-link:focus,
+.footer-suport-link:hover,
+.footer-suport-link:focus,
+.footer-support-address-link:hover,
+.footer-support-address-link:focus {
+  color: var(--accent-color);
+  font-size: 1.1em;
+}
+.footer-support {
+  width: 255px;
+  margin-right: 16px;
+}
+.footer-support-list {
+  margin-bottom: 10px;
+}
+.footer-support-address-link {
+  font-style: normal;
+}
+
+.footer-form-title {
+  margin-bottom: 18px;
+}
+
+.footer-form {
+  position: relative;
+}
+
+.footer-input {
+  padding: 10px 12px;
+  width: 255px;
+  height: 40px;
+  background-color: --white-color;
+  opacity: 0.2;
+  border: none;
+  border-radius: 8px;
+}
+
+.footer-button-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+
+.footer-button-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--white-color);
 }
