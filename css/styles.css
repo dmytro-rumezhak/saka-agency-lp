@@ -358,19 +358,19 @@ body {
 }
 
 img[src='./images/jhon-doe.jpg'] {
-  border-top-left-radius: 105px;
+  border-top-left-radius: 110px;
 }
 
 img[src='./images/doe-jhon.jpg'] {
-  border-top-right-radius: 105px;
+  border-top-right-radius: 110px;
 }
 
 img[src='./images/jhon-key.jpg'] {
-  border-bottom-left-radius: 105px;
+  border-bottom-left-radius: 110px;
 }
 
 img[src='./images/kekey.jpg'] {
-  border-bottom-right-radius: 105px;
+  border-bottom-right-radius: 110px;
 }
 
 .founder-item-right {
@@ -545,22 +545,20 @@ img[src='./images/kekey.jpg'] {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--white-color);
-  opacity: 0.1;
+  background-color: rgba(255, 255, 255, 0.1);
 
-  transition: opacity 250ms var(--timing-function), fill 250ms var(--timing-function),
+  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function),
     transform 250ms var(--timing-function);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
 }
 .footer-social-icon {
   z-index: 1000;
   width: 17px;
   height: 17px;
-  opacity: 1;
-  fill: red;
+  fill: var(--white-color);
   transform: scale(1);
   transition: fill 250ms var(--timing-function), transform 250ms var(--timing-function);
 }
@@ -568,7 +566,7 @@ img[src='./images/kekey.jpg'] {
 .footer-social-link:hover .footer-social-icon,
 .footer-social-link:focus .footer-social-icon {
   fill: var(--background-color);
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 .footer-company {
@@ -629,10 +627,17 @@ img[src='./images/kekey.jpg'] {
   padding: 10px 12px;
   width: 255px;
   height: 40px;
-  background-color: --white-color;
-  opacity: 0.2;
+  background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 8px;
+  color: white;
+
+  transition: background-color 250ms var(--timing-function);
+}
+
+.footer-input:hover,
+.footer-input:focus {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .footer-button-submit {
@@ -651,4 +656,10 @@ img[src='./images/kekey.jpg'] {
   width: 18px;
   height: 18px;
   fill: var(--white-color);
+  transition: fill 250ms var(--timing-function);
+}
+
+.footer-button-submit:hover > .footer-button-icon,
+.footer-button-submit:focus > .footer-button-icon {
+  fill: var(--background-color);
 }
