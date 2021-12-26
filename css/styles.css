@@ -319,18 +319,32 @@ body {
   justify-content: center;
 }
 
-.founder-list-left {
-  margin-right: 25px;
-}
-
-.founder-item-left,
-.founder-item-right {
-  max-width: 540px;
+.founder-list {
   display: flex;
-  align-items: flex-end;
+  flex-wrap: wrap;
 }
 
-.founder-item-left:not(:last-child) {
+.founder-item {
+  width: 540px;
+  display: flex;
+}
+
+.founder-item:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.founder-item:nth-child(2n + 1) {
+  margin-right: 25px;
+  align-items: flex-start;
+}
+
+.founder-item:nth-child(3) {
+  margin-top: -68px;
+}
+
+.founder-item:nth-child(2) {
+  align-self: flex-end;
+  margin-top: 68px;
   margin-bottom: 25px;
 }
 
@@ -338,10 +352,13 @@ body {
   text-align: right;
   padding-right: 10px;
   padding-bottom: 15px;
+  bottom: 0;
 }
 
-.founder-item-left:nth-child(2) > .founder-item-left-text {
-  padding-bottom: 90px;
+.founder-item-right-text {
+  text-align: left;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .founder-item-title {
@@ -371,25 +388,6 @@ img[src='./images/jhon-key.jpg'] {
 
 img[src='./images/kekey.jpg'] {
   border-bottom-right-radius: 110px;
-}
-
-.founder-item-right {
-  flex-direction: row-reverse;
-}
-
-.founder-item-right:not(:last-child) {
-  margin-bottom: 25px;
-  margin-top: 70px;
-}
-
-.founder-item-right-text {
-  text-align: left;
-  padding-left: 10px;
-  padding-bottom: 10px;
-}
-
-.founder-item-right:nth-child(2) > .founder-item-right-text {
-  padding-bottom: 110px;
 }
 
 /* Стилізація Our Customer Say */
